@@ -17,3 +17,9 @@ for directory, dirnames, filenames in os.walk("."):
 
 keys = list(dataframes.keys())
 keys.sort()
+
+# Select the dataframes which occur in the 'csse_covid_19_daily_reports'
+# subdirectory.
+standardized_keys = [pathname for pathname in keys 
+                     if os.path.split(os.path.split(pathname)[0])[-1]
+                         == 'csse_covid_19_daily_reports']
