@@ -30,13 +30,13 @@ def extract_ymd(filepath):
 
 dated_data_frames = {extract_ymd(filepath) : dataframes[filepath]
                      for filepath in standardized_keys}
-columns = {}
-previous_columns = None
-for key in sorted(dated_data_frames.keys()):
-    if tuple(dated_data_frames[key].columns) != previous_columns:
-        previous_columns = tuple(dated_data_frames[key].columns)
-        columns[key] = previous_columns
-        
+# columns = {}
+# previous_columns = None
+# for key in sorted(dated_data_frames.keys()):
+#     if tuple(dated_data_frames[key].columns) != previous_columns:
+#         previous_columns = tuple(dated_data_frames[key].columns)
+#         columns[key] = previous_columns
+
 # columns
 # Out[26]: 
 # {(1, 22, 2020): ('Province/State',
